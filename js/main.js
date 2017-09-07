@@ -24,7 +24,7 @@ var cards = [
 var cardsInPlay = [];
 
 var checkForMatch = function () {
-	if (cardsInPlay[0] === cardsInPlay[2]){
+	if (cardsInPlay[0] === cardsInPlay[1]){
 		alert("You Found a match!");
 	}
 	else {
@@ -49,8 +49,8 @@ var createBoard = function () {
 		var cardElement = document.createElement('img');
 		cardElement.setAttribute('src', "images/back.png");
 		cardElement.setAttribute('data-id', i);
-		cardElement.addEventListener('click', flipCard)
-		document.getElementByID('game-board').appendChild(cardElement);
+		cardElement.addEventListener('click', flipCard); 
+		document.getElementById('game-board').appendChild(cardElement);
 	}
 };
 
